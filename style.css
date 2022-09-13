@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    border: none;
+}
+.wrapper{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.turnIndicator{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: Red;
+}
+.square{
+    height: 90px;
+    width: 90px;
+    border: 1px solid;
+    transition: .3s;
+    cursor: pointer;
+
+}
+.square:hover{
+    background-color: #8888;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    margin: 2rem;
+
+}
+.boxtext{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3){
+    border-top:none;
+}
+.square:nth-child(1),
+.square:nth-child(7),
+.square:nth-child(4){
+    border-left:none;
+}
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9){
+    border-right:none;
+}
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9){
+    border-bottom:none;
+}
+button{
+    padding:1rem 0;
+    width: 100px;
+    background-color: crimson;
+    color: white;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0,0.6),
+              -2px 0px 5px rgba(0, 0, 0,0.6);
+              transition: .3s;
+}
+button:hover{
+    box-shadow: 0 4px 5px rgba(0, 0, 0,0.6),
+    2px 0px 5px rgba(0, 0, 0,0.6);;
+    background-color: rgba(182, 4, 4, 0.795);
+    color: white;
+}
